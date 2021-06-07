@@ -13,7 +13,7 @@ STACK="website"
 
 outputs="aws cloudformation describe-stacks \
     --stack-name $PROJECT-$COMPONENT-$STACK-$STAGE \
-    --output json \
+    --output table \
     --query Stacks[].Outputs[] \
     --region $REGION"
 
