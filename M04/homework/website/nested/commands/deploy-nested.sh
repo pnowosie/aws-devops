@@ -43,7 +43,8 @@ PARAMETERS="root"
 PARAM_NAME="/$PROJECT/$STAGE/$COMPONENT/artifact-bucket/bucket-name"
 S3_FOR_TEMPLATES=$(aws ssm get-parameter --name $PARAM_NAME --output text --query Parameter.Value --region $REGION)
 
-echo "$S3_FOR_TEMPLATES"
+echo "Artifact bucket name: $S3_FOR_TEMPLATES"
+echo "################## PACKAGE NESTED STACK ####################"
 
 # Package the nested template
 
@@ -54,6 +55,7 @@ package="aws cloudformation package \
      --template-file $TEMPLATE_FILE \
      --output-template $TEMPLATE_PACKAGED \
      --s3-bucket $S3_FOR_TEMPLATES"
+     --region $REGION
 
 echo $package
 
