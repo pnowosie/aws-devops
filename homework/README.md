@@ -35,7 +35,7 @@ gdzie `component` to jeden ze sposobów deploymentu:
 
 Proces deploymentu jest **w pełni automatyczny** (w tym kopiowanie plików strony WWW), ale:
 
-- Kopiowanie plików strony WWW do bucket-u dla "nested" nie działa jeszcze w pełni automatycznie - gdyż nie wyciągam poprawnie nazwy bucket-u 
-(nested stack `website-nested-nested-dev-...` ma losową nazwę :) )
+- ~~Kopiowanie plików strony WWW do bucket-u dla "nested" nie działa jeszcze w pełni automatycznie~~
+    dodane w [[6bf61d5](https://github.com/pnowosie/aws-devops/commit/6bf61d5e954266c2176302b8151bbdfd489affae)]
 
 Patrz także: [[Issue #3](https://github.com/pnowosie/aws-devops/issues/3)]
