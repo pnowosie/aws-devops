@@ -11,7 +11,6 @@
 
 if [[ -f website/${COMPONENT}/commands/copy-files.sh ]]; then
     echo "Extracting website bucket name from nested stack"
-    #COMPONENT=${COMPONENT} bash website/${COMPONENT}/commands/copy-files.sh
     bash website/${COMPONENT}/commands/copy-files.sh
 else
     website_bucket_name=$(COMPONENT=${COMPONENT} bash get-bucket-name.sh)

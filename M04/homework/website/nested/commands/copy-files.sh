@@ -14,7 +14,7 @@ REGION="eu-west-1"
 
 get_website_stack_arn="aws cloudformation list-stack-resources \
   --stack-name $PROJECT-$COMPONENT-$STACK-$STAGE \
-  --output text \
+  --region $REGION --output text \
   --query=StackResourceSummaries[?LogicalResourceId=='Website'].PhysicalResourceId"
 
 echo "$get_website_stack_arn"
