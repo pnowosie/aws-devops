@@ -17,10 +17,8 @@ delete-${COMPONENT}:
 show:
 	COMPONENT=${COMPONENT} bash display-stack-outputs.sh
 
-copy-files: website_bucket_name=$$(COMPONENT=${COMPONENT} bash get-bucket-name.sh)
 copy-files:
-	@echo "Copy files to S3 bucket: ${website_bucket_name}"; \
-	aws s3 sync "website/website-content/" "s3://${website_bucket_name}"
+	@COMPONENT=${COMPONENT} bash copy-files.sh
 
 delete-files: website_bucket_name=$$(COMPONENT=${COMPONENT} bash get-bucket-name.sh)
 delete-files:

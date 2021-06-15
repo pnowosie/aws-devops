@@ -8,6 +8,7 @@ REGION="eu-west-1"
 #########  Parameters:  ###########
 # set via env vars
 #  -  COMPONENT    ="export-import"
+#     posible values: export-import | nested | parametrized
 #
 
 ######### common part #########
