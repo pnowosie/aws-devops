@@ -18,8 +18,8 @@ Parameters:
 Resources:
   S3Website:
     Type: AWS::S3::Bucket
-    DeletionPolicy: Retain
-    UpdateReplacePolicy: Retain
+    DeletionPolicy: Delete
+    UpdateReplacePolicy: Delete
     Properties:
       WebsiteConfiguration:
         IndexDocument: index.html
