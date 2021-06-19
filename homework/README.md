@@ -52,9 +52,11 @@ Patrz także: [[Issue #3](https://github.com/pnowosie/aws-devops/issues/3)]
 <img width="783" alt="obraz" src="https://user-images.githubusercontent.com/1813036/122638908-3cc56100-d0f7-11eb-8e81-1a6c6820b66e.png">
 </details>
 
+<br/>
 Ponownie proces deploymentu ubrany w Makefile, polecenia:
 - `up` - stawia wszystko
 - `down` - usuwa nat gateway-e by ciąć koszty
+
 
 <details>
   <summary><b>Utworzenie zasobów</b></summary>
@@ -73,3 +75,10 @@ Ponownie proces deploymentu ubrany w Makefile, polecenia:
 <img width="632" alt="obraz" src="https://user-images.githubusercontent.com/1813036/122640006-4651c780-d0fd-11eb-8524-a4e730a6d393.png">
 
 </details>
+
+
+<br/>
+
+**Rozwiązanie zagadki**
+https://github.com/pnowosie/aws-devops/issues/4
+
