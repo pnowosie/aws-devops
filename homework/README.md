@@ -52,7 +52,7 @@ Patrz także: [[Issue #3](https://github.com/pnowosie/aws-devops/issues/3)]
 <img width="783" alt="obraz" src="https://user-images.githubusercontent.com/1813036/122638908-3cc56100-d0f7-11eb-8e81-1a6c6820b66e.png">
 </details>
 
-<br/>
+
 Ponownie proces deploymentu ubrany w Makefile, polecenia:
 - `up` - stawia wszystko
 - `down` - usuwa nat gateway-e by ciąć koszty
@@ -76,8 +76,6 @@ Ponownie proces deploymentu ubrany w Makefile, polecenia:
 
 </details>
 
-
-<br/>
 
 **Rozwiązanie zagadki**
 https://github.com/pnowosie/aws-devops/issues/4
