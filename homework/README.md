@@ -80,3 +80,61 @@ Ponownie proces deploymentu ubrany w Makefile, polecenia:
 **Rozwiązanie zagadki**
 https://github.com/pnowosie/aws-devops/issues/4
 
+## Moduł 6
+
+### Tworzenie instancji
+
+Odpalenie skryptu - niepowodzenie. Prosta poprawka - brawo :clap: Karolina.
+<details>
+  <summary><i>Uwaga spoiler</i></summary>
+W poleceniu `` brakuje capability `--capabilities CAPABILITY_NAMED_IAM`
+</details>
+<br/>
+
+<details>
+  <summary><b>Próba utworzenia instancji bez klucza - niepowodzenie. Condition działa!</b></summary>
+
+![image](https://user-images.githubusercontent.com/1813036/123264523-67018f00-d4fa-11eb-9f67-b7351bd9ddce.png)
+</details>
+
+<details>
+  <summary><b>Tworzę klucz</b></summary>
+
+```bash
+aws ec2 create-key-pair --key-name memes-generator-dev-jumphost-key (...)
+
+aws ec2 describe-key-pairs \
+  --key-names memes-generator-dev-jumphost-key \
+  --output yaml | tee
+KeyPairs:
+- KeyFingerprint: 27:30:8c:95:4d:c1:c8:31:fd:cc:35:24:92:df:e4:40:37:6c:dd:26
+  KeyName: memes-generator-dev-jumphost-key
+  KeyPairId: key-01e515XXXXXXXXXXX
+  Tags: []
+```
+</details>
+
+<details>
+  <summary><b>Tworzę stack ponownie - Działa :bangbang:</b></summary>
+
+```bash
+make up
+
+...
+aws cloudformation deploy --template-file memes-generator/operations/templates/jumphost.yaml ...
+
+Waiting for changeset to be created..
+Waiting for stack create/update to complete
+Successfully created/updated stack - memes-generator-operations-jumphost-dev
+make[1]: Leaving directory '/home/pnowosie/Proj/edu/aws-devops/project'
+touch .network
+```
+
+![image](https://user-images.githubusercontent.com/1813036/123268042-f65c7180-d4fd-11eb-83e6-e25f8c358d5e.png)
+
+</details>
+<br/>
+
+
+Do połączenia się z Jumphost-em użyję Session Manager-a z AWS CLI. W tym celu instaluję [plugin dla CLI](https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-working-with-install-plugin.html)
+
