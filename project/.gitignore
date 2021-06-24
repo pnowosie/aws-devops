@@ -1,0 +1,2 @@
+# don't include Makefile task progress files
+.network

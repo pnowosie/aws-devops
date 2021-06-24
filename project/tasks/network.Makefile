@@ -4,6 +4,7 @@
 ## 2. VPS networks with subnets and route tables
 ## 3. Network related security groups
 ## 4. NAT Gateways
+## 5. Jumphost EC2
 #TODO: add `up-nat-gateway`
 up: up-log-bucket up-network up-security-groups up-jumphost
 
