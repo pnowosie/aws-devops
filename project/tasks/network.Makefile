@@ -27,3 +27,6 @@ up-jumphost:
 
 down-nat-gateway:
 	@bash memes-generator/network/commands/delete-nat-gateway.sh
+
+show-jumphost:
+	@bash memes-generator/operations/commands/show-jumphost.sh

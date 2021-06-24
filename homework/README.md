@@ -84,10 +84,12 @@ https://github.com/pnowosie/aws-devops/issues/4
 
 ### Tworzenie instancji
 
-Odpalenie skryptu - niepowodzenie. Prosta poprawka - brawo :clap: Karolina.
+Odpalenie skryptu - niepowodzenie. 
 <details>
   <summary><i>Uwaga spoiler</i></summary>
-W poleceniu `` brakuje capability `--capabilities CAPABILITY_NAMED_IAM`
+W poleceniu `memes-generator/operations/commands/deploy-jumphost.sh` brakuje capability `--capabilities CAPABILITY_NAMED_IAM`
+
+Prosta poprawka - brawo :clap: Karolina.
 </details>
 <br/>
 
@@ -133,8 +135,65 @@ touch .network
 ![image](https://user-images.githubusercontent.com/1813036/123268042-f65c7180-d4fd-11eb-83e6-e25f8c358d5e.png)
 
 </details>
-<br/>
 
+<details>
+  <summary><b>Połączenie do instancji</b></summary>
+
+**1. SSH**
+
+```bash
+ssh -i "~/.aws/jumphost-key.pem" ec2-user@ec2-XXXXXXXXXXXXX.eu-west-1.compute.amazonaws.com
+Last login: Thu Jun 24 13:17:40 2021 from XXX
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux 2 AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-2/
+[ec2-user@ip-10-0-46-21 ~]$ ls -la
+razem 16
+drwx------ 3 ec2-user ec2-user  95 06-24 13:18 .
+drwxr-xr-x 3 root     root      22 06-24 12:59 ..
+-rw------- 1 ec2-user ec2-user  13 06-24 13:18 .bash_history
+-rw-r--r-- 1 ec2-user ec2-user  18 2020-07-15  .bash_logout
+-rw-r--r-- 1 ec2-user ec2-user 193 2020-07-15  .bash_profile
+-rw-r--r-- 1 ec2-user ec2-user 231 2020-07-15  .bashrc
+drwx------ 2 ec2-user ec2-user  29 06-24 12:59 .ssh
+[ec2-user@ip-10-0-46-21 ~]$ logout
+Connection to ec2-XXXXXXXXXXXXX.eu-west-1.compute.amazonaws.com closed.
+```
+
+**2. Session Manager**
 
 Do połączenia się z Jumphost-em użyję Session Manager-a z AWS CLI. W tym celu instaluję [plugin dla CLI](https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-working-with-install-plugin.html)
 
+```bash
+make-network show-jumphost | tee
+aws cloudformation describe-stacks     --stack-name memes-generator-operations-jumphost-dev     --output yaml     --query Stacks[].Outputs[]     --region eu-west-1
+- Description: The ID of Jump Host Instance
+  OutputKey: JumpHostInstanceId
+  OutputValue: i-05bcaXXXXXXXXXXXX
+- Description: Public IP address of the jumphost instance
+...
+
+aws ssm start-session --target i-05bcaXXXXXXXXXXXX --region $REGION
+
+Starting session with SessionId: cli-admin-0XXXXXXXXXXXXXXXX
+sh-4.2$ whoami
+ssm-user
+sh-4.2$ ls /
+bin  boot  dev	etc  home  lib	lib64  local  media  mnt  opt  proc  root  run	sbin  srv  sys	tmp  usr  var
+sh-4.2$ ls /home
+ec2-user  ssm-user
+sh-4.2$ exit
+
+
+Exiting session with sessionId: cli-admin-0XXXXXXXXXXXXXXXX.
+```
+
+Zaobserwuj, ze na maszynie są konta dla dwóch userów:
+* ec2-user - przy połączeniu przez SSH
+* ssm-user - przy połączeniu przez SSM
+
+</details>
+<br/>
