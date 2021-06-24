@@ -196,4 +196,39 @@ Zaobserwuj, ze na maszynie są konta dla dwóch userów:
 * ssm-user - przy połączeniu przez SSM
 
 </details>
+
+<details>
+  <summary><b>Wyszukiwanie instancji, szczegółów, zmiana stanu</b></summary>
+
+Rozszezyłem polecenia w pliku `tasks/network.Makefile` które bazują na wyszukiwaniu instancji po tagu `Name`.
+Wyszukiwanie po tagu jest realizowane przez `operations/commands/get-jumphost-details.sh`, polecenia wygląda tak
+
+```bash
+aws ec2 describe-instances \
+    --filter Name=tag:Name,Values=${PROJECT}-${STAGE}-${COMPONENT}-${STACK}-instance \
+    --query Reservations[*].Instances[*].[InstanceId,State.Name,PublicIpAddress,PublicDnsName] \
+    --output text \
+    --region $REGION
+```
+
+Oto wynik jego działania (poukrywałem wrazliwe szczegóły)
+```bash
+make-network get-jumphost-details | tee
+i-05bcaXXXXXXXXXXXX	running	IP.000.00.000	ec2-00-000-00-000.eu-west-1.compute.amazonaws.com
+```
+
+Mając powyzsze mogę
+* `make-network connect-jumphost` - połączyć się przez SSM
+
+* `make-network do-jumphost-stop` - zastopować instancje
+```bash 
+make-network do-jumphost-stop > /dev/null
+make-network get-jumphost-details | tee
+i-05bcaXXXXXXXXXXXX	stopping ...
+```
+* `make-network do-jumphost-start` - wystartować instancje
+
+Dokładne komendy AWS CLI mozna znaleźć w [`tasks/network.Makefile`](https://github.com/pnowosie/aws-devops/blob/master/project/tasks/network.Makefile).
+
+</details>
 <br/>
