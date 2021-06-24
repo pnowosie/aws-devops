@@ -227,6 +227,40 @@ make-network get-jumphost-details | tee
 i-05bcaXXXXXXXXXXXX	stopping ...
 ```
 * `make-network do-jumphost-start` - wystartować instancje
+* `make-network get-jumphost-status` - szczegółowy status instancji
+```bash
+make-network get-jumphost-status | jq
+{
+  "InstanceStatuses": [
+    {
+      "AvailabilityZone": "eu-west-1a",
+      "InstanceId": "i-05bcaXXXXXXXXXXXX",
+      "InstanceState": {
+        "Code": 16,
+        "Name": "running"
+      },
+      "InstanceStatus": {
+        "Details": [
+          {
+            "Name": "reachability",
+            "Status": "passed"
+          }
+        ],
+        "Status": "ok"
+      },
+      "SystemStatus": {
+        "Details": [
+          {
+            "Name": "reachability",
+            "Status": "passed"
+          }
+        ],
+        "Status": "ok"
+      }
+    }
+  ]
+}
+```
 
 Dokładne komendy AWS CLI mozna znaleźć w [`tasks/network.Makefile`](https://github.com/pnowosie/aws-devops/blob/master/project/tasks/network.Makefile).
 
