@@ -66,7 +66,7 @@ Resources:
         Name: !Sub /${Project}/${Stage}/${Component}/vpc/vpc-id
         Value: !Ref Vpc
         Tags:
-          Name: !Sub ${Project}-${Stage}-${Component}-vpc-id
+          Name: !Sub ${Project}-${Stage}-${Component}-vpc-id-param
 
   FlowLog:
     Type: AWS::EC2::FlowLog
@@ -97,7 +97,7 @@ Resources:
       Name: !Sub /${Project}/${Stage}/${Component}/public-subnet-a/subnet-id
       Value: !Ref PublicSubnetA
       Tags:
-        Name: !Sub ${Project}-${Stage}-${Component}-public-subnet-a-id
+        Name: !Sub ${Project}-${Stage}-${Component}-public-subnet-a-id-param
 
   PublicSubnetB:
     Type: AWS::EC2::Subnet
@@ -119,7 +119,7 @@ Resources:
       Name: !Sub /${Project}/${Stage}/${Component}/public-subnet-b/subnet-id
       Value: !Ref PublicSubnetB
       Tags:
-        Name: !Sub ${Project}-${Stage}-${Component}-public-subnet-b-id
+        Name: !Sub ${Project}-${Stage}-${Component}-public-subnet-b-id-param
 
   PrivateSubnetA:
     Type: AWS::EC2::Subnet
@@ -141,7 +141,7 @@ Resources:
       Name: !Sub /${Project}/${Stage}/${Component}/private-subnet-a/subnet-id
       Value: !Ref PrivateSubnetA
       Tags:
-        Name: !Sub ${Project}-${Stage}-${Component}-private-subnet-a-id
+        Name: !Sub ${Project}-${Stage}-${Component}-private-subnet-a-id-param
 
   PrivateSubnetB:
     Type: AWS::EC2::Subnet
@@ -163,7 +163,7 @@ Resources:
       Name: !Sub /${Project}/${Stage}/${Component}/private-subnet-b/subnet-id
       Value: !Ref PrivateSubnetB
       Tags:
-        Name: !Sub ${Project}-${Stage}-${Component}-private-subnet-b-id
+        Name: !Sub ${Project}-${Stage}-${Component}-private-subnet-b-id-param
 
   DataSubnetA:
     Type: AWS::EC2::Subnet
@@ -185,7 +185,7 @@ Resources:
       Name: !Sub /${Project}/${Stage}/${Component}/data-subnet-a/subnet-id
       Value: !Ref DataSubnetA
       Tags:
-        Name: !Sub ${Project}-${Stage}-${Component}-data-subnet-a-id
+        Name: !Sub ${Project}-${Stage}-${Component}-data-subnet-a-id-param
 
   DataSubnetB:
     Type: AWS::EC2::Subnet
@@ -207,7 +207,7 @@ Resources:
       Name: !Sub /${Project}/${Stage}/${Component}/data-subnet-b/subnet-id
       Value: !Ref DataSubnetB
       Tags:
-        Name: !Sub ${Project}-${Stage}-${Component}-data-subnet-b-id
+        Name: !Sub ${Project}-${Stage}-${Component}-data-subnet-b-id-param
 
   InternetGateway:
       Type: AWS::EC2::InternetGateway
@@ -248,7 +248,7 @@ Resources:
       Name: !Sub /${Project}/${Stage}/${Component}/public-route-table/rt-id
       Value: !Ref PublicRouteTable
       Tags:
-        Name: !Sub ${Project}-${Stage}-${Component}-public-route-table-id
+        Name: !Sub ${Project}-${Stage}-${Component}-public-route-table-id-param
 
   PublicSubnetARouteTableAssociation:
       Type: AWS::EC2::SubnetRouteTableAssociation
@@ -303,7 +303,7 @@ Resources:
       Name: !Sub /${Project}/${Stage}/${Component}/private-route-table-a/rt-id
       Value: !Ref PrivateRouteTableA
       Tags:
-        Name: !Sub ${Project}-${Stage}-${Component}-private-route-table-a-id
+        Name: !Sub ${Project}-${Stage}-${Component}-private-route-table-a-id-param
 
   PrivateRouteTableB:
     Type: AWS::EC2::RouteTable
@@ -322,7 +322,7 @@ Resources:
       Name: !Sub /${Project}/${Stage}/${Component}/private-route-table-b/rt-id
       Value: !Ref PrivateRouteTableB
       Tags:
-        Name: !Sub ${Project}-${Stage}-${Component}-private-route-table-b-id
+        Name: !Sub ${Project}-${Stage}-${Component}-private-route-table-b-id-param
 
   DataRouteTableA:
     Type: AWS::EC2::RouteTable
@@ -341,7 +341,7 @@ Resources:
       Name: !Sub /${Project}/${Stage}/${Component}/data-route-table-a/rt-id
       Value: !Ref DataRouteTableA
       Tags:
-        Name: !Sub ${Project}-${Stage}-${Component}-data-route-table-a-id
+        Name: !Sub ${Project}-${Stage}-${Component}-data-route-table-a-id-param
 
   DataRouteTableB:
     Type: AWS::EC2::RouteTable
@@ -360,7 +360,7 @@ Resources:
       Name: !Sub /${Project}/${Stage}/${Component}/data-route-table-b/rt-id
       Value: !Ref DataRouteTableB
       Tags:
-        Name: !Sub ${Project}-${Stage}-${Component}-data-route-table-b-id
+        Name: !Sub ${Project}-${Stage}-${Component}-data-route-table-b-id-param
 
 Outputs:
   VpcId:

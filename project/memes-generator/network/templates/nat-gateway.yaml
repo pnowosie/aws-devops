@@ -23,9 +23,9 @@ Parameters:
 
 Resources:
   NatGatewayEIP:
-      Type: AWS::EC2::EIP
-      Properties:
-        Domain: vpc
+    Type: AWS::EC2::EIP
+    Properties:
+      Domain: vpc
 
   NatGateway:
     Type: AWS::EC2::NatGateway

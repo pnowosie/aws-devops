@@ -5,13 +5,12 @@ STAGE="dev"
 REGION="eu-west-1"
 
 
-#########  Params ###########
+#########  Params (jumphost with db tools & secrets permisions) ###########
 
 COMPONENT="operations"
-STACK="jumphost"
-TEMPLATE="jumphost"
-PARAMETERS="jumphost"
-
+STACK="jumphost-db"
+TEMPLATE="jumphost-db"
+PARAMETERS="jumphost-db"
 
 ######### common part #########
 
@@ -21,8 +20,8 @@ PARAM_FILE="$PROJECT/$COMPONENT/parameters/$PARAMETERS-$STAGE.json"
 deploy="aws cloudformation deploy \
     --template-file $TEMPLATE_FILE \
     --stack-name $PROJECT-$COMPONENT-$STACK-$STAGE \
-    --capabilities CAPABILITY_NAMED_IAM \
     --no-fail-on-empty-changeset \
+    --capabilities CAPABILITY_IAM \
     --parameter-overrides file://$PARAM_FILE \
     --region $REGION \
     --tags Project=$PROJECT Stage=$STAGE Component=$COMPONENT"
