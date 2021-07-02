@@ -50,6 +50,7 @@ deploy="aws cloudformation deploy \
     --region $REGION \
     --tags Project=$PROJECT Stage=$STAGE Component=$COMPONENT"
 
-echo $deploy
+#echo $deploy
 
-$deploy
+#$deploy
+

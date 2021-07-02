@@ -10,9 +10,10 @@ clean:
 	rm .network
 
 .network:
-	${MAKE} -f tasks/network.Makefile
+	${MAKE} -f tasks/network.Makefile up
 	touch .network
 
 down-network:
 	${MAKE} -f tasks/network.Makefile down
+	rm .network
 

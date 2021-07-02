@@ -1,14 +1,13 @@
 REGION ?= "eu-west-1"
 
-## Network (in correct order of setup)
+## Network (in order of deployment)
 ## 
 ## 1. S3 bucket for VPS logs
 ## 2. VPS networks with subnets and route tables
 ## 3. Network related security groups
 ## 4. NAT Gateways
 ## 5. Jumphost EC2
-#TODO: add `up-nat-gateway`
-up: up-log-bucket up-network up-security-groups up-jumphost
+up: up-log-bucket up-network up-security-groups up-nat-gateway up-jumphost
 
 down:
 	@bash memes-generator/network/down.sh

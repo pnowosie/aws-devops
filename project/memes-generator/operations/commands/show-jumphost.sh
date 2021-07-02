@@ -8,9 +8,7 @@ REGION="eu-west-1"
 #########  Params ###########
 
 COMPONENT="operations"
-STACK="jumphost"
-TEMPLATE="jumphost"
-PARAMETERS="jumphost"
+STACK="jumphost-db"
 
 ######### common part #########
 

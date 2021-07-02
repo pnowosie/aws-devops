@@ -1,17 +1,16 @@
 #!/bin/bash
 
-#DOC: Usuwa stacki utworzone dla zadania 'Network'
+#DOC: Usuwa stacki utworzone dla zadania 'Application'
 ##    Make nie potrafi wycofać zmian w odwrotnej kolejności niż utworzone
 ##    Gdybyśmy połączyli te stacki w jeden nested wycofywanie byłoby prostsze.
 
 
 Stacks=(
-  "$PROJECT-operations-jumphost-$STAGE"
-  "$PROJECT-network-nat-gateway-a-$STAGE"
-  "$PROJECT-network-nat-gateway-b-$STAGE"
-  "$PROJECT-network-security-groups-$STAGE"
-  "$PROJECT-network-network-$STAGE"
-#  "$PROJECT-operations-log-bucket-$STAGE"
+  "$PROJECT-application--$STAGE"
+  "$PROJECT-data-database-$STAGE"
+#  "$PROJECT-application-configuration-bucket-$STAGE"
+#  "$PROJECT-application-memes-bucket-$STAGE"
+#  "$PROJECT-application-pictures-bucket-$STAGE"
 )
 
 for stack in ${Stacks[*]}; do
@@ -23,6 +22,6 @@ for stack in ${Stacks[*]}; do
 
   echo $delete
 
-  $delete
+  #$delete
 done
 
