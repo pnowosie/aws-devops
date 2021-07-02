@@ -10,7 +10,8 @@ REGION ?= "eu-west-1"
 #TODO: add `up-nat-gateway`
 up: up-log-bucket up-network up-security-groups up-jumphost
 
-down: down-nat-gateway
+down:
+	@bash memes-generator/network/down.sh
 
 
 up-log-bucket:

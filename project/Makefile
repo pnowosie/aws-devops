@@ -4,7 +4,7 @@
 # AWS components that will be provisioned:
 up: .network
 
-down:
+down: down-network
 
 clean:
 	rm .network
@@ -12,3 +12,7 @@ clean:
 .network:
 	${MAKE} -f tasks/network.Makefile
 	touch .network
+
+down-network:
+	${MAKE} -f tasks/network.Makefile down
+
