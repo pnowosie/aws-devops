@@ -5,7 +5,7 @@ REGION ?= "eu-west-1"
 ## 1. Buckety na obrazki, konfiguracje CW i appki 
 
 
-up: up-buckets up-database
+up: up-buckets up-database up-app-permission up-launch-template up-app-instance
 
 down:
 	@bash memes-generator/application/down.sh
@@ -22,4 +22,12 @@ up-database:
 	# Na jumphost-db wykonaj
 	# memes-generator/data/commands/create-db-app-user.sh
 
+up-app-permission:
+	@bash memes-generator/application/commands/deploy-application-permissions.sh
+
+up-launch-template:
+	@bash memes-generator/application/commands/deploy-launch-template.sh
+
+up-app-instance:
+	@bash memes-generator/application/commands/deploy-application-instance.sh
 

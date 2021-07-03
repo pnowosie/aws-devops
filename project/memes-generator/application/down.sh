@@ -6,7 +6,9 @@
 
 
 Stacks=(
-  "$PROJECT-application--$STAGE"
+  "$PROJECT-application-application-instance-$STAGE"
+  "$PROJECT-application-launch-template-$STAGE"
+  "$PROJECT-application-application-permissions-$STAGE"
   "$PROJECT-data-database-$STAGE"
 #  "$PROJECT-application-configuration-bucket-$STAGE"
 #  "$PROJECT-application-memes-bucket-$STAGE"
@@ -22,6 +24,6 @@ for stack in ${Stacks[*]}; do
 
   echo $delete
 
-  #$delete
+  $delete
 done
 
