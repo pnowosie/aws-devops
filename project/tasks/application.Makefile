@@ -18,7 +18,7 @@ up-buckets:
 	@bash memes-generator/application/commands/upload-pictures.sh
 
 up-database:
-	@bash memes-generator/data/commands/upload-database.sh
+	@bash memes-generator/data/commands/deploy-database.sh
 	# Na jumphost-db wykonaj
 	# memes-generator/data/commands/create-db-app-user.sh
 

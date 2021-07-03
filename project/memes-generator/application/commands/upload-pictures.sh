@@ -8,7 +8,7 @@ COMPONENT="application"
 PARAM_NAME="/$PROJECT/$STAGE/$COMPONENT/pictures-bucket/name"
 BUCKET=$(aws ssm get-parameter --name $PARAM_NAME --output text --query Parameter.Value --region $REGION)
 
-mkir -p .local/pictures
+mkdir -p .local/pictures
 
 cd .local/pictures || exit
 

@@ -266,3 +266,62 @@ Dokładne komendy AWS CLI mozna znaleźć w [`tasks/network.Makefile`](https://g
 
 </details>
 <br/>
+
+## Moduł 7
+
+Praca włożona w przygotowanie sensownej struktury Makefile-ów popłaciła, dodawanie kolejnych tasków i tworzenie stack-ów poszło stosunkowo prosto.
+Aby i tym razem mieć jedno polecenie `make up` zrezygnowałem z tworzenia użytkownika bazy danych na etapie utworzenia bazy. Dzięki temu proces może 
+automatyczmie utworzyć wszystkie potrzebne komponenty. Minusem jest to, że usługa aplikacji nie wstaje, ale możemy to stosunkowo prosto naprawić.
+
+### Utworzone stacki
+<details>
+  <summary><b>Screenshot-y z konsoli AWS</b></summary>
+
+<img width="1052" alt="obraz" src="https://user-images.githubusercontent.com/1813036/124365255-033c3c00-dc47-11eb-8aec-a3aee2c77703.png">
+
+Wygenerowany mem
+![obraz](https://user-images.githubusercontent.com/1813036/124366025-c1ae8f80-dc4c-11eb-9d21-f56193f28558.png)
+
+Testy z Jumphosta - odpytywanie aplikacji po prywatnym (z subnet-u) adresie IP
+<img width="896" alt="obraz" src="https://user-images.githubusercontent.com/1813036/124366262-c07e6200-dc4e-11eb-9854-9222e296b5e9.png">
+
+**Cloud Watch**
+<img width="974" alt="obraz" src="https://user-images.githubusercontent.com/1813036/124366386-cf194900-dc4f-11eb-8e0e-bca2d06e2e99.png">
+
+<img width="1163" alt="obraz" src="https://user-images.githubusercontent.com/1813036/124366436-3b944800-dc50-11eb-8026-3e22f017cae5.png">
+
+<img width="1137" alt="obraz" src="https://user-images.githubusercontent.com/1813036/124366537-d5f48b80-dc50-11eb-9419-32ad6943e7f4.png">
+</details>
+
+### Inspekcja infractruktury
+
+Usługa aplikacji oczywiście padła, możemy zweryfikować nasze oczekiwania (brak użytkownika bazodanowego) poprzez wywołanie 
+```bash
+sudo journalctl -u memes-generator
+```
+
+Czas utworzyć użytkownika bazy danych (pominęłem na etapie stawiania infrastruktury jak wyżej opisane)
+Poprzez SSM Session manager loguję się na jumphost-a, jest to bardzo wygodne z konsoli AWS
+```bash
+curl -SsLf https://raw.githubusercontent.com/pnowosie/aws-devops...create-db-app-user.sh \ 
+   | bash -
+```
+
+Wracając na maszynę aplikacyjną, restartuję usługę
+<img width="896" alt="restart usługi aplikacji" src="https://user-images.githubusercontent.com/1813036/124365775-6da2ab80-dc4a-11eb-9926-d1aaad60a90e.png">
+
+Przy okazji potwierdzamy również że agent Cloud-Watch działa poprawnie.
+I tworzymy mema (zwróć uwagę na port w przykładzie - powinno być 8080)
+
+Wykonuję testy z Jumphost-a łącząc się z aplikacją po jej adresie IP z subnet-u.
+
+Przeglądam dane zapisane w usłudze CloudWatch. (Zobacz screen-y :point_up: w sekcji wyżej)
+
+### Redukcja kosztów
+
+* Zatrzymuję maszyny z aplikacją i jumphost-em.
+* Usuwam NAT Gateway
+* Będę monitorował koszty w aplikacji mobilnej i w razie czego usunę bazę danych
+
+
+
