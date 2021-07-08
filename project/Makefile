@@ -25,3 +25,9 @@ down-application:
 	${MAKE} -f tasks/application.Makefile down
 	rm .application
 
+show-ec2-instances:
+	aws ec2 describe-instances \
+	  --region $${REGION} \
+	  --query "Reservations[].Instances[].[InstanceId,State.Name,Tags[?Key=='Name']]" \
+	  --output yaml
+

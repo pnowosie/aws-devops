@@ -3,9 +3,11 @@ REGION ?= "eu-west-1"
 ## Aplication (in order of deployment)
 ##
 ## 1. Buckety na obrazki, konfiguracje CW i appki 
+## << TODO! >>
+## n. Application Load Balancer
+## n. Autoscaling
 
-
-up: up-buckets up-database up-app-permission up-launch-template up-app-instance
+up: up-buckets up-database up-app-permission up-launch-template up-app-instance up-load-balancer up-autoscaling
 
 down:
 	@bash memes-generator/application/down.sh
@@ -30,4 +32,10 @@ up-launch-template:
 
 up-app-instance:
 	@bash memes-generator/application/commands/deploy-application-instance.sh
+
+up-load-balancer:
+	@bash memes-generator/network/commands/deploy-load-balancing.sh
+
+up-autoscaling:
+	@bash memes-generator/application/commands/deploy-application-auto-scaling.sh
 
