@@ -31,3 +31,17 @@ show-ec2-instances:
 	  --query "Reservations[].Instances[].[InstanceId,State.Name,Tags[?Key=='Name']]" \
 	  --output yaml
 
+list-stacks:
+	aws cloudformation list-stacks \
+	  --region $${REGION} \
+	  --query "StackSummaries[].StackName" \
+	  --stack-status-filter CREATE_COMPLETE \
+	  --output yaml
+
+show-stack:
+	@aws cloudformation describe-stacks \
+	  --stack-name ${stack_name} \
+	  --region $${REGION} \
+	  --query "Stacks[].[StackName,Outputs[]]" \
+	  --output yaml
+
