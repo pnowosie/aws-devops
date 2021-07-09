@@ -1,0 +1,17 @@
+{
+    "sourceType": [
+        "GitHub"
+    ],
+    "sourceInfo": [
+        " {\n \"owner\":\"pnowosie\",\n \"repository\":\"aws-devops\",\n \"path\":\"project/memes-generator/data/commands/create-db-app-user.sh\",\n \"getOptions\":\"branch:master\",\n }"
+    ],
+    "commandLine": [
+        "create-db-app-user.sh"
+    ],
+    "workingDirectory": [
+        ""
+    ],
+    "executionTimeout": [
+        "120"
+    ]
+}
