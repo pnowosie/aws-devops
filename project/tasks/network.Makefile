@@ -33,24 +33,3 @@ up-jumphost:
 down-nat-gateway:
 	@bash memes-generator/network/commands/delete-nat-gateway.sh
 
-show-jumphost:
-	@bash memes-generator/operations/commands/show-jumphost.sh
-
-get-jumphost-details:
-	@bash memes-generator/operations/commands/get-jumphost-details.sh
-
-get-jumphost-status: instance_id=$$(bash memes-generator/operations/commands/get-jumphost-details.sh | cut -f1)
-get-jumphost-status:
-	@aws ec2 describe-instance-status --instance-ids ${instance_id} --region ${REGION}
-
-connect-jumphost: instance_id=$$(bash memes-generator/operations/commands/get-jumphost-details.sh | cut -f1)
-connect-jumphost:
-	@aws ssm start-session --target ${instance_id} --region ${REGION}
-
-do-jumphost-start: instance_id=$$(bash memes-generator/operations/commands/get-jumphost-details.sh | cut -f1)
-do-jumphost-start:
-	@aws ec2 start-instances --instance-ids ${instance_id} --region ${REGION}
-
-do-jumphost-stop: instance_id=$$(bash memes-generator/operations/commands/get-jumphost-details.sh | cut -f1)
-do-jumphost-stop:
-	@aws ec2 stop-instances --instance-ids ${instance_id} --region ${REGION}

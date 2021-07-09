@@ -25,23 +25,3 @@ down-application:
 	${MAKE} -f tasks/application.Makefile down
 	rm .application
 
-show-ec2-instances:
-	aws ec2 describe-instances \
-	  --region $${REGION} \
-	  --query "Reservations[].Instances[].[InstanceId,State.Name,Tags[?Key=='Name']]" \
-	  --output yaml
-
-list-stacks:
-	aws cloudformation list-stacks \
-	  --region $${REGION} \
-	  --query "StackSummaries[].StackName" \
-	  --stack-status-filter CREATE_COMPLETE \
-	  --output yaml
-
-show-stack:
-	@aws cloudformation describe-stacks \
-	  --stack-name ${stack_name} \
-	  --region $${REGION} \
-	  --query "Stacks[].[StackName,Outputs[]]" \
-	  --output yaml
-
