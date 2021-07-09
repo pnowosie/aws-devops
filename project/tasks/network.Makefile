@@ -7,6 +7,8 @@ REGION ?= "eu-west-1"
 ## 3. Network related security groups
 ## 4. NAT Gateways
 ## 5. Jumphost EC2
+##
+
 up: up-log-bucket up-network up-security-groups up-nat-gateway up-jumphost
 
 down:

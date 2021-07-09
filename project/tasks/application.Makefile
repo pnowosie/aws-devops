@@ -3,9 +3,14 @@ REGION ?= "eu-west-1"
 ## Aplication (in order of deployment)
 ##
 ## 1. Buckety na obrazki, konfiguracje CW i appki 
-## << TODO! >>
-## n. Application Load Balancer
-## n. Autoscaling
+## 2. Baza danych i sekrety w Secrets Manager
+## 3. Uprawnienia dla instancji aplikacji
+## 4. Launch template dla maszyn EC2
+## 5. Instancja EC2 z aplikacją
+##    (jumphost został zmieniony od razu na etapie tworzenia zadań 'network' 
+## 6. Application Load Balancer
+## 7. Autoscaling
+##
 
 up: up-buckets up-database up-app-permission up-launch-template up-app-instance up-load-balancer up-autoscaling
 

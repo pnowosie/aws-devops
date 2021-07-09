@@ -6,6 +6,8 @@
 
 
 Stacks=(
+  "$PROJECT-application-application-auto-scaling-$STAGE"
+  "$PROJECT-network-load-balancing-$STAGE"
   "$PROJECT-application-application-instance-$STAGE"
   "$PROJECT-application-launch-template-$STAGE"
   "$PROJECT-application-application-permissions-$STAGE"
