@@ -16,7 +16,7 @@ show-stack:
 	  --stack-name ${stack_name} \
 	  --region $${REGION} \
 	  --query "Stacks[].[StackName,Outputs[]]" \
-	  --output yaml
+	  --output json
 
 show-jumphost:
 	@bash memes-generator/operations/commands/show-jumphost.sh
@@ -39,4 +39,13 @@ do-jumphost-start:
 do-jumphost-stop: instance_id=$$(bash memes-generator/operations/commands/get-jumphost-details.sh | cut -f1)
 do-jumphost-stop:
 	@aws ec2 stop-instances --instance-ids ${instance_id} --region ${REGION}
+
+show-lb-stack: stack_name="$${PROJECT}-network-load-balancing-$${STAGE}"
+show-lb-stack: show-stack
+
+# ALB_URL="http://$(cmd show-lb-stack | jq -r '.[0][1][1].OutputValue')"
+# cmd show-app-status lb_url=$ALB_URL
+show-app-status:
+	echo "LB URL: ${lb_url}"; \
+	curl ${lb_url}/actuator/health
 
