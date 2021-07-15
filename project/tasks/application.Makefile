@@ -12,7 +12,7 @@ REGION ?= "eu-west-1"
 ## 7. Autoscaling
 ##
 
-up: up-buckets up-database up-app-permission up-launch-template up-app-instance up-load-balancer up-autoscaling
+up: up-buckets up-database up-app-permission up-launch-template up-app-instance up-load-balancer up-autoscaling up-website-ui
 
 down:
 	@bash memes-generator/application/down.sh
@@ -44,3 +44,6 @@ up-load-balancer:
 up-autoscaling:
 	@bash memes-generator/application/commands/deploy-application-auto-scaling.sh
 
+up-website-ui:
+	@bash memes-generator/application/commands/deploy-website-bucket.sh
+	@bash memes-generator/application/commands/upload-website-content.sh
