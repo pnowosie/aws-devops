@@ -1,0 +1,26 @@
+[
+    {
+        "ParameterKey": "Project",
+        "ParameterValue": "memes-generator"
+    },
+    {
+        "ParameterKey": "Stage",
+        "ParameterValue": "dev"
+    },
+    {
+        "ParameterKey": "Component",
+        "ParameterValue": "cdn"
+    },
+    {
+        "ParameterKey": "AlbUrl",
+        "ParameterValue": "/memes-generator/dev/network/alb/url"
+    },
+    {
+        "ParameterKey": "S3WebsiteBucketName",
+        "ParameterValue": "/memes-generator/dev/application/website-bucket/name"
+    },
+    {
+        "ParameterKey": "WAF",
+        "ParameterValue": "/memes-generator/dev/waf/web-acl/id"
+    }
+]

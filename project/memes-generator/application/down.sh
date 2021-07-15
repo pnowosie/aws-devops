@@ -6,6 +6,8 @@
 
 
 Stacks=(
+  "$PROJECT-cdn-cloudfront-$STAGE"
+#  "$PROJECT-application-website-bucket-$STAGE"
   "$PROJECT-application-application-auto-scaling-$STAGE"
   "$PROJECT-network-load-balancing-$STAGE"
   "$PROJECT-application-application-instance-$STAGE"
