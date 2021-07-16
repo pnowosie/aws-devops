@@ -1,0 +1,5 @@
+{
+    "sourceType": ["GitHub"],
+    "sourceInfo": ["{\"owner\":\"pnowosie\", \"repository\":\"aws-devops\", \"path\": \"project/memes-generator/data/commands/create-db-app-user.sh\"}"],
+    "commandLine":["create-db-app-user.sh"]
+}
