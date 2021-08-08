@@ -22,3 +22,4 @@ Praca domowa dla każdego tygodnia znajduje się w osobnym pliku `M00.md` z odpo
 
 ## [Moduł 11](./M11.md)
 
+## [Moduł 12](./M12.md)
