@@ -1,0 +1,10 @@
+[33mb1908fe[m -[1;31m (HEAD -> feature/cicd-resources-for-infra)[m Monitoring: add dashboard to pipeline [32m(2 tygodnie temu) [1;34m<Paweł Nowosielski>[m
+[33m8dca521[m -[1;31m[m Monitoring: add alerts to pipeline [32m(2 tygodnie temu) [1;34m<Paweł Nowosielski>[m
+[33m4468729[m -[1;31m[m Pipeline for NDev environment [32m(2 tygodnie temu) [1;34m<Paweł Nowosielski>[m
+[33m5610254[m -[1;31m (origin/feature/cicd-resources-for-infra)[m add ndev pipeline [32m(2 tygodnie temu) [1;34m<Paweł Nowosielski>[m
+[33m7711f52[m -[1;31m[m M10: homework complete [32m(3 tygodnie temu) [1;34m<Paweł Nowosielski>[m
+[33m7d09af4[m -[1;31m[m add website bucket and cloudfront to the pipeline [32m(3 tygodnie temu) [1;34m<Paweł Nowosielski>[m
+[33m33da51c[m -[1;31m[m fix permissions for SSM CreateDBUser document [32m(3 tygodnie temu) [1;34m<Paweł Nowosielski>[m
+[33me3a545b[m -[1;31m[m prepare pipeline to first run [32m(3 tygodnie temu) [1;34m<Paweł Nowosielski>[m
+[33m0e911a9[m -[1;31m[m Added feature CI/CD code [32m(4 tygodnie temu) [1;34m<Paweł Nowosielski>[m
+[33m020d401[m -[1;31m (origin/main, main)[m Initial commit [32m(4 tygodnie temu) [1;34m<Paweł Nowosielski>[m

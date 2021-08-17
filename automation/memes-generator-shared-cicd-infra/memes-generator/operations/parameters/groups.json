@@ -1,0 +1,31 @@
+
+[
+    {
+        "ParameterKey": "GroupPrefix",
+        "ParameterValue": "operations"
+    },
+    {
+        "ParameterKey": "AdminRoleName",
+        "ParameterValue": "Admin"
+    },
+    {
+        "ParameterKey": "EnforceMfa",
+        "ParameterValue": "yes"
+    },
+    {
+        "ParameterKey": "FullAccessRoleName",
+        "ParameterValue": "FullAccess"
+    },
+    {
+        "ParameterKey": "ReadOnlyRoleName",
+        "ParameterValue": "ReadOnly"
+    },
+    {
+        "ParameterKey": "WorkingRoleName",
+        "ParameterValue": "Working"
+    },
+    {
+        "ParameterKey": "TargetAccountNumber",
+        "ParameterValue": "000000000000"
+    }
+  ]

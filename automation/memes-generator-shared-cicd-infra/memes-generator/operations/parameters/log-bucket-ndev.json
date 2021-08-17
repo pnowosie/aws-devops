@@ -1,0 +1,16 @@
+
+[
+  {
+      "ParameterKey": "Project",
+      "ParameterValue": "memes-generator"
+  },
+  {
+      "ParameterKey": "Stage",
+      "ParameterValue": "ndev"
+  },
+  {
+      "ParameterKey": "Component",
+      "ParameterValue": "operations"
+  }
+]
+

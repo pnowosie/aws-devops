@@ -1,0 +1,27 @@
+
+[
+    {
+        "ParameterKey": "Project",
+        "ParameterValue": "memes-generator"
+    },
+    {
+        "ParameterKey": "Stage",
+        "ParameterValue": "ndev"
+    },
+    {
+        "ParameterKey": "Component",
+        "ParameterValue": "operations"
+    },
+    {
+        "ParameterKey": "BackupName",
+        "ParameterValue": "database-backup"
+    },
+    {
+        "ParameterKey": "DBInstanceName",
+        "ParameterValue": "/memes-generator/ndev/data/database/instance-name"
+    },
+    {
+        "ParameterKey": "ScheduleExpression",
+        "ParameterValue": "cron(15 8 * * ? *)"
+    }
+]

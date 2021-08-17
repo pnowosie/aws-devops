@@ -1,0 +1,17 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.8
+    commands:
+      - yum -y install jq
+      - pip3 uninstall -y awscli
+      - curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && unzip awscliv2.zip && ./aws/install
+      - aws --version
+  build:
+    commands:
+      - ./$PROJECT/cicd/scripts/upload-cw-config.sh
+      - ./$PROJECT/cicd/scripts/upload-srv-config.sh
+      - ./$PROJECT/cicd/scripts/upload-pictures.sh
+      - ls -l

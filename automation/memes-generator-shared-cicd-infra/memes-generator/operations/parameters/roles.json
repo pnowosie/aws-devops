@@ -1,0 +1,27 @@
+
+[
+    {
+        "ParameterKey": "AdminRoleName",
+        "ParameterValue": "Admin"
+    },
+    {
+        "ParameterKey": "EnforceMfa",
+        "ParameterValue": "yes"
+    },
+    {
+        "ParameterKey": "FullAccessRoleName",
+        "ParameterValue": "FullAccess"
+    },
+    {
+        "ParameterKey": "ReadOnlyRoleName",
+        "ParameterValue": "ReadOnly"
+    },
+    {
+        "ParameterKey": "SourceAccountIds",
+        "ParameterValue": "000000000000"
+    },
+    {
+        "ParameterKey": "WorkingRoleName",
+        "ParameterValue": "Working"
+    }
+  ]

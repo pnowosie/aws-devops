@@ -1,0 +1,7 @@
+[33m86a5765[m -[1;31m (HEAD -> ndevelopment, origin/ndevelopment)[m M12: database backup for ndev env [32m(8 dni temu) [1;34m<Paweł Nowosielski>[m
+[33me8e6735[m -[1;31m[m Monitoring: It needs to be ARN not REF [32m(2 tygodnie temu) [1;34m<Paweł Nowosielski>[m
+[33m6e5bc65[m -[1;31m[m PR2: Add monitoring feature [32m(2 tygodnie temu) [1;34m<Paweł Nowosielski>[m
+[33m68cd35e[m -[1;31m (origin/feature/ndev-env-clone, feature/ndev-env-clone)[m Env: environment clone dev -> ndev [32m(2 tygodnie temu) [1;34m<Paweł Nowosielski>[m
+[33m8a6ca69[m -[1;31m (origin/development, development)[m add website resources [32m(3 tygodnie temu) [1;34m<Paweł Nowosielski>[m
+[33m76fa6a0[m -[1;31m[m Added developed infrastructure code [32m(4 tygodnie temu) [1;34m<Paweł Nowosielski>[m
+[33m31a3dc6[m -[1;31m (origin/main, main)[m Initial commit [32m(4 tygodnie temu) [1;34m<Paweł Nowosielski>[m

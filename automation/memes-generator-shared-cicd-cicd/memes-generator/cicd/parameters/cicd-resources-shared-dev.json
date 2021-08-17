@@ -1,0 +1,58 @@
+[
+    {
+        "ParameterKey": "Project",
+        "ParameterValue": "memes-generator"
+    },
+    {
+        "ParameterKey": "SharedStage",
+        "ParameterValue": "shared-dev"
+    },
+    {
+        "ParameterKey": "Component",
+        "ParameterValue": "cicd"
+    },
+    {
+        "ParameterKey": "DevAccountId",
+        "ParameterValue": "/memes-generator/shared-dev/cicd/account-dev/id"
+    },
+    {
+        "ParameterKey": "DevAccountDeploymentRoleName",
+        "ParameterValue": "/memes-generator/shared-dev/cicd/deployment-role-dev/name"
+    },
+    {
+        "ParameterKey": "DevAccountServiceRoleName",
+        "ParameterValue": "/memes-generator/shared-dev/cicd/service-role-dev/name"
+    },
+    {
+        "ParameterKey": "KmsKeyArn",
+        "ParameterValue": "/memes-generator/shared-dev/cicd/kms-key/arn"
+    },
+    {
+        "ParameterKey": "RepositoryName",
+        "ParameterValue": "/memes-generator/shared/cicd/repository-infra/name"
+    },
+    {
+        "ParameterKey": "ProdAccountId",
+        "ParameterValue": "/memes-generator/shared-dev/cicd/account-prod/id"
+    },
+    {
+        "ParameterKey": "ProdAccountDeploymentRoleName",
+        "ParameterValue": "/memes-generator/shared-dev/cicd/deployment-role-prod/name"
+    },
+    {
+        "ParameterKey": "ProdAccountServiceRoleName",
+        "ParameterValue": "/memes-generator/shared-dev/cicd/service-role-prod/name"
+    },
+    {
+        "ParameterKey": "TestAccountId",
+        "ParameterValue": "/memes-generator/shared-dev/cicd/account-test/id"
+    },
+    {
+        "ParameterKey": "TestAccountDeploymentRoleName",
+        "ParameterValue": "/memes-generator/shared-dev/cicd/deployment-role-test/name"
+    },
+    {
+        "ParameterKey": "TestAccountServiceRoleName",
+        "ParameterValue": "/memes-generator/shared-dev/cicd/service-role-test/name"
+    }
+]

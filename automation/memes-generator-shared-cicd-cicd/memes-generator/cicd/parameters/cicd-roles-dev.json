@@ -1,0 +1,22 @@
+[
+    {
+        "ParameterKey": "Project",
+        "ParameterValue": "memes-generator"
+    },
+    {
+        "ParameterKey": "Stage",
+        "ParameterValue": "dev"
+    },
+    {
+        "ParameterKey": "Component",
+        "ParameterValue": "cicd"
+    },
+    {
+        "ParameterKey": "KmsKeyArn",
+        "ParameterValue": "arn:aws:kms:eu-west-1:000000000000:key/00000000-8aa5-446a-b4c6-000000000000"
+    },
+    {
+        "ParameterKey": "SharedResourcesAccountId",
+        "ParameterValue": "000000000000"
+    }
+]

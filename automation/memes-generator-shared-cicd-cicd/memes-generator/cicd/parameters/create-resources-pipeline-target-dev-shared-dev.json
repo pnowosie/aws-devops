@@ -1,0 +1,74 @@
+[
+    {
+        "ParameterKey": "Project",
+        "ParameterValue": "memes-generator"
+    },
+    {
+        "ParameterKey": "SharedStage",
+        "ParameterValue": "shared-dev"
+    },
+    {
+        "ParameterKey": "Component",
+        "ParameterValue": "cicd"
+    },
+    {
+        "ParameterKey": "ArtifactBucket",
+        "ParameterValue": "/memes-generator/shared-dev/cicd/artifact-bucket/name"
+    },
+    {
+        "ParameterKey": "BranchName",
+        "ParameterValue": "ndevelopment"
+    },
+    {
+        "ParameterKey": "CodePipelineRoleName",
+        "ParameterValue": "/memes-generator/shared-dev/cicd/codepipeline-role/name"
+    },
+    {
+        "ParameterKey": "CrossRegionDeployment",
+        "ParameterValue": "no"
+    },
+    {
+        "ParameterKey": "DeploymentRegion",
+        "ParameterValue": "eu-west-1"
+    },
+    {
+        "ParameterKey": "DeploymentRoleName",
+        "ParameterValue": "/memes-generator/shared-dev/cicd/deployment-role-dev/name"
+    },
+    {
+        "ParameterKey": "KmsKeyArn",
+        "ParameterValue": "/memes-generator/shared-dev/cicd/kms-key/arn"
+    },
+    {
+        "ParameterKey": "RepositoryName",
+        "ParameterValue": "/memes-generator/shared-dev/cicd/repository-infra/name"
+    },
+    {
+        "ParameterKey": "ReviewChangeSets",
+        "ParameterValue": "no"
+    },
+    {
+        "ParameterKey": "ServiceRoleName",
+        "ParameterValue": "/memes-generator/shared-dev/cicd/service-role-dev/name"
+    },
+    {
+        "ParameterKey": "TargetAccountId",
+        "ParameterValue": "/memes-generator/shared-dev/cicd/account-dev/id"
+    },
+    {
+        "ParameterKey": "TargetStage",
+        "ParameterValue": "ndev"
+    },
+    {
+        "ParameterKey": "TestAndBuildProject",
+        "ParameterValue": "memes-generator-shared-dev-cicd-test-and-create-config"
+    },
+    {
+        "ParameterKey": "UploadFilesProject",
+        "ParameterValue": "memes-generator-shared-dev-cicd-upload-files"
+    },
+    {
+        "ParameterKey": "CreateDbUserProject",
+        "ParameterValue": "memes-generator-shared-dev-cicd-create-db-user"
+    }
+]

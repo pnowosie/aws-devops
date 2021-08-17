@@ -1,0 +1,30 @@
+[
+    {
+        "ParameterKey": "Project",
+        "ParameterValue": "memes-generator"
+    },
+    {
+        "ParameterKey": "Stage",
+        "ParameterValue": "ndev"
+    },
+    {
+        "ParameterKey": "Component",
+        "ParameterValue": "operations"
+    },
+    {
+        "ParameterKey": "ImageId",
+        "ParameterValue": "/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2"
+    },
+    {
+        "ParameterKey": "JumpHostSecurityGroup",
+        "ParameterValue": "/memes-generator/ndev/network/jumphost-sg/sg-id"
+    },
+    {
+        "ParameterKey": "PublicSubnetId",
+        "ParameterValue": "/memes-generator/ndev/network/public-subnet-a/subnet-id"
+    },
+    {
+        "ParameterKey": "InstanceType",
+        "ParameterValue": "t2.micro"
+    }
+]

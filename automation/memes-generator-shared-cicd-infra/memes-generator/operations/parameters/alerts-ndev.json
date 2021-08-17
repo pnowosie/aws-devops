@@ -1,0 +1,47 @@
+
+[
+    {
+        "ParameterKey": "Project",
+        "ParameterValue": "memes-generator"
+    },
+    {
+        "ParameterKey": "Stage",
+        "ParameterValue": "ndev"
+    },
+    {
+        "ParameterKey": "Component",
+        "ParameterValue": "operations"
+    },
+    {
+        "ParameterKey": "ApplicationAlertsTopic",
+        "ParameterValue": "/memes-generator/ndev/operations/app-alerts-topic/arn"
+    },
+    {
+        "ParameterKey": "ApplicationInformationTopic",
+        "ParameterValue": "/memes-generator/ndev/operations/app-info-topic/arn"
+    },
+    {
+        "ParameterKey": "ApplicationAutoScalingGroup",
+        "ParameterValue": "/memes-generator/ndev/application/asg/name"
+    },
+    {
+        "ParameterKey": "DbIdentifierName",
+        "ParameterValue": "/memes-generator/ndev/data/database/instance-name"
+    },
+    {
+        "ParameterKey": "InfrastructureAlertsTopics",
+        "ParameterValue": "/memes-generator/ndev/operations/infra-alerts-topic/arn"
+    },
+    {
+        "ParameterKey": "InfrastructureInformationTopic",
+        "ParameterValue": "/memes-generator/ndev/operations/infra-info-topic/arn"
+    },
+    {
+        "ParameterKey": "LoadBalancerFullName",
+        "ParameterValue": "/memes-generator/ndev/network/alb/fullname"
+    },
+    {
+        "ParameterKey": "Period",
+        "ParameterValue": "60"
+    }
+]

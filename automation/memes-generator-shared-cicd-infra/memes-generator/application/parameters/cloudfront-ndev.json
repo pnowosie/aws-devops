@@ -1,0 +1,22 @@
+[
+    {
+        "ParameterKey": "Project",
+        "ParameterValue": "memes-generator"
+    },
+    {
+        "ParameterKey": "Stage",
+        "ParameterValue": "ndev"
+    },
+    {
+        "ParameterKey": "Component",
+        "ParameterValue": "application"
+    },
+    {
+        "ParameterKey": "AlbUrl",
+        "ParameterValue": "/memes-generator/ndev/network/alb/url"
+    },
+    {
+        "ParameterKey": "S3WebsiteBucketName",
+        "ParameterValue": "/memes-generator/ndev/application/website-bucket/name"
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "ParameterKey": "Project",
+        "ParameterValue": "memes-generator"
+    },
+    {
+        "ParameterKey": "Stage",
+        "ParameterValue": "ndev"
+    },
+    {
+        "ParameterKey": "Component",
+        "ParameterValue": "network"
+    },
+    {
+        "ParameterKey": "PublicSubnet",
+        "ParameterValue": "/memes-generator/ndev/network/public-subnet-b/subnet-id"
+    },
+    {
+        "ParameterKey": "PrivateRouteTable",
+        "ParameterValue": "/memes-generator/ndev/network/private-route-table-b/rt-id"
+    }
+]

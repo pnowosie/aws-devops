@@ -1,0 +1,38 @@
+[
+    {
+        "ParameterKey": "Project",
+        "ParameterValue": "memes-generator"
+    },
+    {
+        "ParameterKey": "SharedStage",
+        "ParameterValue": "shared-dev"
+    },
+    {
+        "ParameterKey": "Component",
+        "ParameterValue": "cicd"
+    },
+    {
+        "ParameterKey": "BucketFunction",
+        "ParameterValue": "web-statics"
+    },
+    {
+        "ParameterKey": "BuildSpecFile",
+        "ParameterValue": "upload-files.buildspec.yaml"
+    },
+    {
+        "ParameterKey": "CodeBuildRoleName",
+        "ParameterValue": "/memes-generator/shared-dev/cicd/codebuild-role/name"
+    },
+    {
+        "ParameterKey": "S3Key",
+        "ParameterValue": "codebuild-artifacts"
+    },
+    {
+        "ParameterKey": "ProjectFunction",
+        "ParameterValue": "upload-files"
+    },
+    {
+        "ParameterKey": "TargetStage",
+        "ParameterValue": "dev"
+    }
+]

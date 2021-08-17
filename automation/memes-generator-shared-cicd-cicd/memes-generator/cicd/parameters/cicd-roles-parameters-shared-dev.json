@@ -1,0 +1,38 @@
+[
+    {
+        "ParameterKey": "Project",
+        "ParameterValue": "memes-generator"
+    },
+    {
+        "ParameterKey": "SharedStage",
+        "ParameterValue": "shared-dev"
+    },
+    {
+        "ParameterKey": "Component",
+        "ParameterValue": "cicd"
+    },
+    {
+        "ParameterKey": "DevAccountDeploymentRoleName",
+        "ParameterValue": "memes-generator-cicd-cicd-roles-dev-DeploymentRole-GFCK8WQNOV1J"
+    },
+    {
+        "ParameterKey": "DevAccountServiceRoleName",
+        "ParameterValue": "memes-generator-cicd-cicd-roles-dev-ServiceRole-AS2XRXO9JN04"
+    },
+    {
+        "ParameterKey": "ProdAccountDeploymentRoleName",
+        "ParameterValue": "REPLACE_WITH_ROLE_NAME"
+    },
+    {
+        "ParameterKey": "ProdAccountServiceRoleName",
+        "ParameterValue": "REPLACE_WITH_ROLE_NAME"
+    },
+    {
+        "ParameterKey": "TestAccountDeploymentRoleName",
+        "ParameterValue": "REPLACE_WITH_ROLE_NAME"
+    },
+    {
+        "ParameterKey": "TestAccountServiceRoleName",
+        "ParameterValue": "REPLACE_WITH_ROLE_NAME"
+    }
+]

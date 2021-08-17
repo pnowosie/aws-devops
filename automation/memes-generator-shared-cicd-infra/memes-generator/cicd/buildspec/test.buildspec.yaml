@@ -1,0 +1,31 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.8
+    commands:
+      - pip3 install 'cfn-lint==0.52'
+      - cfn-lint --version
+      - yum -y install jq
+      - pip3 uninstall -y awscli
+      - curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && unzip awscliv2.zip && ./aws/install
+      - aws --version
+  pre_build:
+    commands:
+      - ./${PROJECT}/cicd/scripts/use-cfn-lint.sh
+      - ./${PROJECT}/cicd/scripts/validate-template.sh
+  build:
+    commands:
+      - ./${PROJECT}/cicd/scripts/copy-buildspec-files.sh
+      - ./${PROJECT}/cicd/scripts/copy-scripts.sh
+      - ./${PROJECT}/cicd/scripts/copy-config.sh
+      - ./${PROJECT}/cicd/scripts/package.sh
+      - ./${PROJECT}/cicd/scripts/create-config-files.sh
+      - ls -l
+artifacts:
+  files:
+    - "**/*"
+  name: $PROJECT-$TARGET_STAGE
+  base-directory: build
+  discard-paths: false

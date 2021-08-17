@@ -1,0 +1,19 @@
+[33m81ecf09[m -[1;31m (HEAD -> development, origin/development)[m add buildspec for website statics [32m(3 tygodnie temu) [1;34m<Paweł Nowosielski>[m
+[33m5434168[m -[1;31m[m initial commit for website cicd [32m(3 tygodnie temu) [1;34m<Paweł Nowosielski>[m
+[33m8dde92b[m -[1;31m (origin/main, main)[m Removed localhost:8081 from the configuration.js file [32m(6 tygodni temu) [1;34m<Karolina Boboli>[m
+[33m259e36c[m -[1;31m[m Merge pull request #5 from cloudstateu/fix/refactoring [32m(6 tygodni temu) [1;34m<karolinaboboli-chmurowisko>[m
+[33m16425bc[m -[1;31m (fix/refactoring)[m Refactored README [32m(6 tygodni temu) [1;34m<Karolina Boboli>[m
+[33mea6e84d[m -[1;31m[m removed IDE files [32m(6 tygodni temu) [1;34m<Karolina Boboli>[m
+[33m693cb02[m -[1;31m[m Merge pull request #4 from cloudstateu/feat/instruction_how_to_deploy [32m(6 tygodni temu) [1;34m<karolinaboboli-chmurowisko>[m
+[33m3fa3dc8[m -[1;31m[m feat: Added instruction how to deploy application [32m(7 tygodni temu) [1;34m<Karol>[m
+[33m2c4af81[m -[1;31m[m Merge pull request #3 from cloudstateu/fix/page_title [32m(7 tygodni temu) [1;34m<Karol Przybylak>[m
+[33mc007acb[m -[1;31m[m fix: Page Title [32m(7 tygodni temu) [1;34m<Karol>[m
+[33m2a13cdb[m -[1;31m[m Merge pull request #2 from cloudstateu/fix/image_styles [32m(7 tygodni temu) [1;34m<Karol Przybylak>[m
+[33m56fb28f[m -[1;31m[m fix: image styles [32m(7 tygodni temu) [1;34m<Dawid Holka>[m
+[33mc470a4c[m -[1;31m[m Merge pull request #1 from cloudstateu/feat/styling [32m(8 tygodni temu) [1;34m<karolinaboboli-chmurowisko>[m
+[33mb2ee58e[m -[1;31m[m feat: page styles [32m(8 tygodni temu) [1;34m<Dawid Holka>[m
+[33m7ed633f[m -[1;31m[m feat: page styles [32m(8 tygodni temu) [1;34m<Dawid Holka>[m
+[33mcdbdb48[m -[1;31m[m Added config file [32m(4 miesiące temu) [1;34m<Karol>[m
+[33md9b155d[m -[1;31m[m First working version [32m(4 miesiące temu) [1;34m<Karol>[m
+[33mffe619b[m -[1;31m[m Working on first version [32m(4 miesiące temu) [1;34m<Karol>[m
+[33m5ca4cbb[m -[1;31m[m Initialize project using Create React App [32m(4 miesiące temu) [1;34m<Karol>[m

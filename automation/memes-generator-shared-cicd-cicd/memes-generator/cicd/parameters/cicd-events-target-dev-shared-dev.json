@@ -1,0 +1,42 @@
+[
+    {
+        "ParameterKey": "Project",
+        "ParameterValue": "memes-generator"
+    },
+    {
+        "ParameterKey": "SharedStage",
+        "ParameterValue": "shared-dev"
+    },
+    {
+        "ParameterKey": "Component",
+        "ParameterValue": "cicd"
+    },
+    {
+        "ParameterKey": "BranchName",
+        "ParameterValue": "development"
+    },
+    {
+        "ParameterKey": "CreateResourcesPipelineArn",
+        "ParameterValue": "/memes-generator/shared-dev/cicd/create-resources-pipeline/dev/arn"
+    },
+    {
+        "ParameterKey": "DeleteResourcesPipelineArn",
+        "ParameterValue": "/memes-generator/shared-dev/cicd/delete-resources-pipeline/dev/arn"
+    },
+    {
+        "ParameterKey": "RepositoryName",
+        "ParameterValue": "/memes-generator/shared/cicd/repository-infra/name"
+    },
+    {
+        "ParameterKey": "TargetStage",
+        "ParameterValue": "dev"
+    },
+    {
+        "ParameterKey": "ScheduleCreation",
+        "ParameterValue": "no"
+    },
+    {
+        "ParameterKey": "ScheduleDeletion",
+        "ParameterValue": "no"
+    }
+]

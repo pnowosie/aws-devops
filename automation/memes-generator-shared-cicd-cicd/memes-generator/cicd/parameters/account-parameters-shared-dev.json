@@ -1,0 +1,30 @@
+[
+    {
+        "ParameterKey": "Project",
+        "ParameterValue": "memes-generator"
+    },
+    {
+        "ParameterKey": "SharedStage",
+        "ParameterValue": "shared-dev"
+    },
+    {
+        "ParameterKey": "Component",
+        "ParameterValue": "cicd"
+    },
+    {
+        "ParameterKey": "DevAccountId",
+        "ParameterValue": "000000000000"
+    },
+    {
+        "ParameterKey": "ProdAccountId",
+        "ParameterValue": "REPLACE_WITH_ACCOUNT_ID"
+    },
+    {
+        "ParameterKey": "SharedResourcesAccountId",
+        "ParameterValue": "000000000000"
+    },
+    {
+        "ParameterKey": "TestAccountId",
+        "ParameterValue": "REPLACE_WITH_ACCOUNT_ID"
+    }
+]

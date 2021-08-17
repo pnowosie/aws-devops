@@ -1,0 +1,38 @@
+[
+    {
+        "ParameterKey": "Project",
+        "ParameterValue": "memes-generator"
+    },
+    {
+        "ParameterKey": "SharedStage",
+        "ParameterValue": "shared-dev"
+    },
+    {
+        "ParameterKey": "Component",
+        "ParameterValue": "cicd"
+    },
+    {
+        "ParameterKey": "ArtifactBucket",
+        "ParameterValue": "/memes-generator/shared-dev/cicd/artifact-bucket/name"
+    },
+    {
+        "ParameterKey": "BuildSpecFile",
+        "ParameterValue": "create-db-user.buildspec.yaml"
+    },
+    {
+        "ParameterKey": "CodeBuildRoleName",
+        "ParameterValue": "/memes-generator/shared-dev/cicd/codebuild-role/name"
+    },
+    {
+        "ParameterKey": "S3Key",
+        "ParameterValue": "codebuild-artifacts"
+    },
+    {
+        "ParameterKey": "ProjectFunction",
+        "ParameterValue": "create-db-user"
+    },
+    {
+        "ParameterKey": "TargetStage",
+        "ParameterValue": "dev"
+    }
+]

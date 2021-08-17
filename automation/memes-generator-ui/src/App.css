@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1087px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.header {
+    padding-top: 128px;
+    font-family: Montserrat, sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 60px;
+    color: #00335a;
+}
+
+.c-create-meme__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 48px;
+    row-gap: 48px;
+    justify-items: center;
+    margin: 50px 0 120px;
+}
+
+.c-create-meme__form {
+    justify-self: center;
+    align-self: center;
+}
+
+.c-create-meme__form-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+}
+
+.c-create-meme__button {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 9px 27px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #159bd7;
+    border-radius: 8px;
+    background-color: #159bd7;
+    transition: all .2s ease-in;
+    font-family: Open Sans,sans-serif;
+    color: #fff;
+    font-size: 18px;
+    line-height: 28px;
+    text-decoration: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.c-create-meme__button:hover{
+    border-color: #16aaec;
+    background-color: #16aaec;
+}
+
+.c-create-meme__img-wrapper{
+    justify-self: center;
+    align-self: center;
+    max-height: 500px;
+    max-width: 550px;
+    background-color: #ddd;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    min-height: 500px;
+    overflow: hidden;
+    justify-content: center;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.c-create-meme__img-wrapper img{
+    width: 100%;
+    height: 100%;
+}
+
+textarea {
+    padding-left: 20px;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+    transition: all .2s ease;
+    font-family: Open Sans, sans-serif;
+    color: #53595e;
+    line-height: 30px;
+    font-size: 14px;
+    min-height: 150px;
+    width: 100%;
+    max-width: 300px;
+}
+
+textarea:focus{
+    border-color: #159bd7;
+    box-shadow: 4px 4px 20px 5px rgba(0, 51, 90 ,0.15);
+    outline: none;
+}
